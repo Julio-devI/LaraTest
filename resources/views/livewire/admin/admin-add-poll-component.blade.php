@@ -1,7 +1,7 @@
 <div style="margin: 20px;">
         <h1> Create Poll </h1>
         <div>
-            <a href="#" class="btn btn-info pull-right">All Polls</a>
+            <a href="{{route('admin.dashboard')}}" class="btn btn-info pull-right">All Polls</a>
         </div>
 
         <form action="/events" method="POST" enctype="multipart/form-data">
