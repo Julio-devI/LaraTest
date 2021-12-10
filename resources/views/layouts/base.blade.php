@@ -38,12 +38,37 @@
                             <li class="nav-item">
                                 <a href="contact.html" class="nav-link">Movies</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="{{route('register')}}" class="nav-link">Register</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{route('login')}}" class="nav-link">Login</a>
-                            </li>
+                            @if(Route::has('login'))
+                                @auth
+                                    @if(Auth::user()->utype === 'ADM')
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">My account (Admin)</a>
+                                            <ul class="drop-down one-column hover-fade">
+                                                <li><a href="#">Dashboard</a></li>
+                                                <li><a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+                                            </ul>
+                                        </li>
+                                    @else
+                                        <li class="nav-item">
+                                            <a href="#">My account (User)</a>
+                                            <ul class="drop-down one-column hover-fade">
+                                                <li><a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+                                            </ul>
+                                        </li>
+                                    @endif
+                                    <form id="logout-form" method="POST" action="{{route('logout')}}">
+                                        @csrf
+                                    </form>
+                                @else
+                                    <li class="nav-item">
+                                        <a href="{{route('register')}}" class="nav-link">Register</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{route('login')}}" class="nav-link">Login</a>
+                                    </li>
+                                @endif
+                            @endif
+                            
                         </ul>                        
                     </div>
                 </nav>  

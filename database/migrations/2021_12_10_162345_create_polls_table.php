@@ -17,7 +17,7 @@ class CreatePollsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('poll_description');
-            $table->image('poll_image');
+            $table->string('image');
             $table->dateTime('start_date');
             $table->dateTime('end_date');
             $table->timestamps();
