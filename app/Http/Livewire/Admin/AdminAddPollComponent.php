@@ -43,9 +43,9 @@ class AdminAddPollComponent extends Component
         $npoll->poll_description = $this->poll_description;
 
         $imageName = Carbon::now()->timestamp . '.' . $this->image->extension();
-        $this->image->storeAs('img.polls', $imageName);
-
+        $this->image->storeAs('img', $imageName);
         $npoll->image = $imageName;
+
         $npoll->start_date = $this->start_date;
         $npoll->end_date = $this->end_date;
         $npoll->save();
