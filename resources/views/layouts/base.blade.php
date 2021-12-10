@@ -17,7 +17,7 @@
     <div class="tm-header">
         <div class="container-fluid">
             <div class="tm-header-inner">
-                <a href="#" class="navbar-brand tm-site-name">Classic</a>
+                <a href="{{route('/')}}" class="navbar-brand tm-site-name">Poll website</a>
                     <!-- navbar -->
                 <nav class="navbar tm-main-nav">
                     <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#tmNavbar">
@@ -26,27 +26,18 @@
                         
                     <div class="collapse navbar-toggleable-sm" id="tmNavbar">
                         <ul class="nav navbar-nav">
-                            <li class="nav-item active">
-                                <a href="index.html" class="nav-link">Home</a>
-                            </li>
                             <li class="nav-item">
-                                <a href="about.html" class="nav-link">Séries</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="blog.html" class="nav-link">Fitness</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="contact.html" class="nav-link">Movies</a>
+                                <a href="{{route('/')}}" class="nav-link">Home</a>
                             </li>
                             @if(Route::has('login'))
                                 @auth
                                     @if(Auth::user()->utype === 'ADM')
                                         <li class="nav-item">
                                             <a href="#" class="nav-link">My account (Admin)</a>
-                                            <ul class="drop-down one-column hover-fade">
-                                                <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
-                                                <li><a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
-                                            </ul>
+                                    
+                                                <li class="nav-item"><a href="{{route('admin.dashboard')}}" class="nav-link">Dashboard</a></li>
+                                                <li class="nav-item"><a href="{{route('logout')}}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+                                            
                                         </li>
                                     @else
                                         <li class="nav-item">
@@ -76,9 +67,9 @@
         </div>            
     </div>
 
-    <div class="tm-home-img-container">
+    {{-- <div class="tm-home-img-container">
         <img src="{{asset('img/tm-home-img.jpg')}}" alt="Image" class="hidden-lg-up img-fluid">
-    </div>
+    </div> --}}
 
     {{$slot}}
         

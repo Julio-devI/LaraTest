@@ -1,4 +1,5 @@
 <div>
+    <h1 class="tm-gold-text" style="margin-left: 62px;">Recents polls</h1>
     <section class="tm-section">
         <div class="container-fluid">
             <div class="row">
