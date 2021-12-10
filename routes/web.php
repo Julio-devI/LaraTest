@@ -2,7 +2,7 @@
 
 use App\Http\Livewire\Admin\AdminAddPollComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
-use App\Http\Livewire\Admin\AdminEditPoll;
+use App\Http\Livewire\Admin\AdminEditPollComponent;
 use App\Http\Livewire\HomeComponent;
 use Illuminate\Support\Facades\Route;
 

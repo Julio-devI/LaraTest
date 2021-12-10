@@ -2,6 +2,7 @@
     <h1> Update Poll </h1>
     <div>
         <a href="{{route('admin.dashboard')}}" class="btn btn-info pull-right">All Polls</a>
+        <a href="{{route('admin.add.poll')}}" class="btn btn-info pull-right">Add Polls</a>
     </div>
 
     <form action="/events" method="POST" enctype="multipart/form-data">
