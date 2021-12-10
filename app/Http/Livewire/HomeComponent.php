@@ -2,12 +2,14 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Poll;
 use Livewire\Component;
 
 class HomeComponent extends Component
 {
     public function render()
     {
-        return view('livewire.home-component')->layout('layouts.base');
+        $npolls = Poll::all();
+        return view('livewire.home-component', ['npolls' => $npolls])->layout('layouts.base');
     }
 }
