@@ -22,7 +22,7 @@ Route::get('/', HomeComponent::class)->name('/');
 Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function () {
     Route::get('/admin/add-poll', AdminAddPollComponent::class)->name('admin.add.poll');
     Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
-    Route::get('/admin/edit-poll', AdminEditPollComponent::class)->name('admin.edit.poll');
+    Route::get('/admin/edit-poll/{poll_id}', AdminEditPollComponent::class)->name('admin.edit.poll');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
