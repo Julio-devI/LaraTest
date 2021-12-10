@@ -39,10 +39,10 @@
                                 <a href="contact.html" class="nav-link">Movies</a>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.html" class="nav-link">Register</a>
+                                <a href="{{route('register')}}" class="nav-link">Register</a>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.html" class="nav-link">Login</a>
+                                <a href="{{route('login')}}" class="nav-link">Login</a>
                             </li>
                         </ul>                        
                     </div>
