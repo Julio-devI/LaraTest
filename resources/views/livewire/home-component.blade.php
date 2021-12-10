@@ -4,8 +4,7 @@
         <div class="container-fluid">
             <div class="row">
                 @foreach ($npolls as $npoll)
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                    
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
                         <div class="tm-content-box">
                             <img src="{{asset('img/tm-img-310x180-1.jpg')}}" alt="Image" class="tm-margin-b-20 img-fluid">
                             <h4 class="tm-margin-b-20 tm-gold-text">{{$npoll->title}}</h4>
@@ -15,8 +14,7 @@
                             <a href="#" class="tm-btn">Opção1: 1000</a>
                             <a href="#" class="tm-btn">Opção1: 1000</a>   
                         </div>
-                       
-                </div>
+                    </div>
                 @endforeach
             </div> <!-- row -->
         </div>
