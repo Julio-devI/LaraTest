@@ -44,7 +44,7 @@
                                         <li class="nav-item">
                                             <a href="#" class="nav-link">My account (Admin)</a>
                                             <ul class="drop-down one-column hover-fade">
-                                                <li><a href="#">Dashboard</a></li>
+                                                <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
                                                 <li><a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                                             </ul>
                                         </li>

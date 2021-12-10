@@ -2,6 +2,7 @@
 
 use App\Http\Livewire\Admin\AdminAddPollComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
+use App\Http\Livewire\Admin\AdminEditPoll;
 use App\Http\Livewire\HomeComponent;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,7 @@ Route::get('/', HomeComponent::class)->name('/');
 Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function () {
     Route::get('/admin/add-poll', AdminAddPollComponent::class)->name('admin.add.poll');
     Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
+    Route::get('/admin/edit-poll', AdminEditPollComponent::class)->name('admin.edit.poll');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
