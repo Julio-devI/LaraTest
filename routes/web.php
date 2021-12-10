@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 //Routes for users
 Route::get('/', HomeComponent::class)->name('/');
+//Routes for admin
+Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function () {
+});
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
