@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Routes for users
 Route::get('/', HomeComponent::class)->name('/');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
