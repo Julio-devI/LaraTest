@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Admin;
 
+use App\Models\Answers;
 use App\Models\Poll;
 use Livewire\Component;
 
@@ -15,6 +16,11 @@ class AdminDashboardComponent extends Component
         }
         $npoll->delete();
         session()->flash('message', 'Poll has been deleted successfully');
+    }
+
+    public function votes()
+    {
+        $answers = Answers::all();
     }
 
     public function render()

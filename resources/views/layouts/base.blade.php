@@ -41,9 +41,9 @@
                                         </li>
                                     @else
                                         <li class="nav-item">
-                                            <a href="#">My account (User)</a>
-                                            
-                                                <li class="nav-item"><a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+                                                <a href="/" class="nav-link">My account (User)</a>
+                        
+                                                <li class="nav-item"><a href="{{route('logout')}}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                                             
                                         </li>
                                     @endif
@@ -66,7 +66,7 @@
             </div>                                  
         </div>            
     </div>
-
+    <hr>
     {{-- <div class="tm-home-img-container">
         <img src="{{asset('img/tm-home-img.jpg')}}" alt="Image" class="hidden-lg-up img-fluid">
     </div> --}}
