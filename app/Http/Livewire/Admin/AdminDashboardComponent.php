@@ -11,7 +11,7 @@ class AdminDashboardComponent extends Component
     {
         $npoll = Poll::find($id);
         if ($npoll->image) {
-            unlink('img' . '/' . $npoll->image);
+            unlink('images/polls' . '/' . $npoll->image);
         }
         $npoll->delete();
         session()->flash('message', 'Poll has been deleted successfully');

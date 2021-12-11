@@ -42,9 +42,9 @@
                                     @else
                                         <li class="nav-item">
                                             <a href="#">My account (User)</a>
-                                            <ul class="drop-down one-column hover-fade">
-                                                <li><a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
-                                            </ul>
+                                            
+                                                <li class="nav-item"><a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+                                            
                                         </li>
                                     @endif
                                     <form id="logout-form" method="POST" action="{{route('logout')}}">

@@ -35,7 +35,7 @@
                                 @foreach ($npolls as $npoll)
                                     <tr>
                                         <td>{{$npoll->id}}</td> 
-                                        <td><img src="{{asset('img/polls')}}/{{$npoll->image}}" width="60" alt=""></td>
+                                        <td><img src="{{asset('images/polls')}}/{{$npoll->image}}" width="60" alt=""></td>
                                         <td>{{$npoll->title}}</td>
                                         <td>{{$npoll->poll_description}}</td>
                                         <td>{{$npoll->start_date}}</td>

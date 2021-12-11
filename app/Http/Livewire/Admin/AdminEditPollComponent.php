@@ -69,7 +69,7 @@ class AdminEditPollComponent extends Component
 
         if ($this->newimage) {
             $imageName = Carbon::now()->timestamp . '.' . $this->newimage->extension();
-            $this->newimage->storeAs('img', $imageName);
+            $this->newimage->storeAs('images/polls', $imageName);
             $npoll->image = $imageName;
         }
 
